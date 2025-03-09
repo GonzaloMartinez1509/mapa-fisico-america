@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Físico de América</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #mapa-container {
+            position: relative;
+            display: inline-block;
+        }
+        #mapa {
+            width: 80%;
+            max-width: 800px;
+        }
+        .punto {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+        }
+        #info {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapa Físico de América</h1>
+    <div id="mapa-container">
+        <img id="mapa" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Physical_map_of_the_Americas_%28orthographic_projection%29.svg" alt="Mapa físico de América">
+        <div class="punto" style="top: 20%; left: 20%;" onclick="mostrarInfo('Montañas Rocosas')"></div>
+        <div class="punto" style="top: 15%; left: 30%;" onclick="mostrarInfo('Escudo Canadiense')"></div>
+        <div class="punto" style="top: 30%; left: 40%;" onclick="mostrarInfo('Gran Llanura Central')"></div>
+        <div class="punto" style="top: 18%; left: 35%;" onclick="mostrarInfo('Península del Labrador')"></div>
+        <div class="punto" style="top: 40%; left: 20%;" onclick="mostrarInfo('Desierto de Altar')"></div>
+        <div class="punto" style="top: 45%; left: 20%;" onclick="mostrarInfo('Golfo de California')"></div>
+        <div class="punto" style="top: 10%; left: 15%;" onclick="mostrarInfo('Golfo de Alaska')"></div>
+        <div class="punto" style="top: 18%; left: 40%;" onclick="mostrarInfo('Terranova')"></div>
+        <div class="punto" style="top: 50%; left: 35%;" onclick="mostrarInfo('Península de Florida')"></div>
+        <div class="punto" style="top: 25%; left: 30%;" onclick="mostrarInfo('Bahía de Hudson')"></div>
+        <div class="punto" style="top: 22%; left: 32%;" onclick="mostrarInfo('Mar de Foxe')"></div>
+        <div class="punto" style="top: 60%; left: 40%;" onclick="mostrarInfo('Mar Caribe')"></div>
+        <div class="punto" style="top: 55%; left: 38%;" onclick="mostrarInfo('Golfo de México')"></div>
+        <div class="punto" style="top: 65%; left: 42%;" onclick="mostrarInfo('Cuba')"></div>
+        <div class="punto" style="top: 70%; left: 40%;" onclick="mostrarInfo('La Española')"></div>
+        <div class="punto" style="top: 72%; left: 42%;" onclick="mostrarInfo('Puerto Rico')"></div>
+        <div class="punto" style="top: 65%; left: 50%;" onclick="mostrarInfo('Islas Bermudas')"></div>
+        <div class="punto" style="top: 20%; left: 37%;" onclick="mostrarInfo('Mar del Labrador')"></div>
+        <div class="punto" style="top: 22%; left: 38%;" onclick="mostrarInfo('Estrecho de Davis')"></div>
+        <div class="punto" style="top: 80%; left: 30%;" onclick="mostrarInfo('Cordillera de los Andes')"></div>
+        <div class="punto" style="top: 75%; left: 35%;" onclick="mostrarInfo('Istmo de Panamá')"></div>
+        <div class="punto" style="top: 85%; left: 40%;" onclick="mostrarInfo('Llanura Amazónica')"></div>
+        <div class="punto" style="top: 88%; left: 45%;" onclick="mostrarInfo('Meseta Brasileña')"></div>
+        <div class="punto" style="top: 90%; left: 35%;" onclick="mostrarInfo('Gran Chaco')"></div>
+        <div class="punto" style="top: 92%; left: 30%;" onclick="mostrarInfo('Pampa')"></div>
+        <div class="punto" style="top: 98%; left: 25%;" onclick="mostrarInfo('Cabo de Hornos')"></div>
+        <div class="punto" style="top: 95%; left: 30%;" onclick="mostrarInfo('Desierto de Atacama')"></div>
+    </div>
+    <p id="info">Haz clic en un punto para ver su nombre</p>
+    <script>
+        function mostrarInfo(lugar) {
+            document.getElementById('info').innerText = "Seleccionaste: " + lugar;
+        }
+    </script>
+</body>
+</html>
